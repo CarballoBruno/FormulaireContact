@@ -1,0 +1,190 @@
+.formulaireContact {
+    width: 65% ; /* Largeur du Conteneur */
+    height :60%; /* Hauteur du conteneur */
+    margin: 20px auto 20px auto; /* Marge Haute Droite Basse Gauche */
+    padding: 20px 50px ; /* Padding interne au conteneur haut/bas gauche/droite */
+    border: 2px solid var(--color_1); /* Bordure */
+    border-radius: 15px; /* Coin arrondi */
+    
+}
+
+.grid_formulaire {
+    width: 100%; /* Largeur du conteneur */
+    margin-left: auto; /* Marge de gauche */
+    margin-right: auto; /* Marge de Droite */
+    margin-top: auto; /* Marge Haute */
+    margin-bottom: auto; /* Marge Basse */
+    height : 100%; /* Hauteur du conteneur */  
+    display:grid;/* Utilisation de grille de placement */
+    grid-template-columns:3fr 1fr 2fr; /* Nombre de Colonnes */
+    grid-template-rows:repeat(12, 1fr) 50fr;/* Nombre de Lignes */
+    grid-template-areas:    
+    "A A A"
+    "B M M"
+    "C M M"
+    "D M M"
+    "E M M"
+    "F M M"
+    "G M M"
+    "H M M"
+    "I M M"
+    "J M M"
+    "K M M"
+    "L . O"
+    ". N ."; 
+    /* Détermination de la grille */
+    
+}
+label {
+    display: inline-block; /* Mode display pour le conteneur */
+    font-family: var(--policeFonts_1); /*Choix de la police d'écriture*/
+    font-size: var(--policeTaille_3); /*Choix de la taille de la police d'écriture */
+    color:var(--color_1); /* Couleur du texte */
+    width:150px; /* Largeur du conteneur */
+    margin-top: 2%; /* Marge Haute */
+    margin-left:2%; /* Marge gauche */
+    
+    
+}
+
+input, select {
+    display: inline-block; /* Mode display pour le conteneur */
+    font-family: var(--policeFonts_1); /*Choix de la police d'écriture*/
+    font-size: var(--policeTaille_3); /*Choix de la taille de la police d'écriture */
+    color:var(--color_2); /* Couleur du texte */
+    width: 300px; /* Largeur du conteneur */
+               
+}
+
+.case_legende {
+    grid-area :A; /*Emplacement dans la grille */
+    font-family: var(--policeFonts_1); /*Choix de la police d'écriture*/
+    font-size: var(--policeTaille_5); /*Choix de la taille de la police d'écriture */
+    color:var(--color_3); /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+    margin-bottom: 3%; /* Marge basse */
+           
+}
+
+#c_message {
+    font-family: var(--policeFonts_1); /*Choix de la police d'écriture*/
+    font-size: var(--policeTaille_5); /*Choix de la taille de la police d'écriture */
+    color:var(--color_2); /* Couleur du texte */
+    margin-top: 20px; /* Marge Haute */
+    margin-bottom: 20px; /* Marge Basse */
+    width: 95%; /* Largeur du conteneur */
+    height: 70%; /* Hauteur du conteneur */
+}
+
+.case_errors {
+    grid-area :O; /*Emplacement dans la grille */
+    font-family: var(--policeFonts_1); /*Choix de la police d'écriture*/
+    font-size: var(--policeTaille_5); /*Choix de la taille de la police d'écriture */
+    color:var(--color_3); /* Couleur du texte */
+    border: 2px solid red;
+    margin-top: 5px; /* Marge Haute */
+    margin-bottom: 5px; /* Marge Basse */    
+
+}
+
+.case_civilite {
+    grid-area :B; /*Emplacement dans la grille */
+}
+
+.case_prenom {
+    grid-area :C; /*Emplacement dans la grille */
+}
+
+.case_nom {
+    grid-area :D; /*Emplacement dans la grille */
+}
+
+.case_societe {
+    grid-area :E; /*Emplacement dans la grille */
+}
+
+.case_adresse_1 {
+    grid-area :F; /*Emplacement dans la grille */
+}
+
+.case_adresse_2 {
+    grid-area :G; /*Emplacement dans la grille */
+}
+
+.case_codepostal {
+    grid-area :H; /*Emplacement dans la grille */
+}
+
+.case_ville {
+    grid-area :I; /*Emplacement dans la grille */
+}
+
+.case_telephone {
+    grid-area :J; /*Emplacement dans la grille */
+}
+
+.case_portable {
+    grid-area :K; /*Emplacement dans la grille */
+}
+
+.case_mail {
+    grid-area :L; /*Emplacement dans la grille */
+}
+
+.case_message {
+    grid-area :M; /*Emplacement dans la grille */   
+}
+
+.case_message label {
+   display: block; /* Mode Display */
+   width: 200px; /* Largeur du conteneur */
+}
+
+
+.btn button{
+    grid-area:N;/*Positionnement dans la grille */
+    height:50px; /* Hauteur du Bouton */
+    width: 100px; /* Largeur du Bouton */
+    margin: 1px 10px; /* Marges haute/basse + Droite/Gauche */
+    background-color: var(--color_1); /* Couleur du Bouton */
+    border-radius: 10px; /* Bord Arrondi */
+    color:var(--color_5); /* Couleur du texte */
+    font-size: var(--policeTaille_4); /* Hauteur de la police */
+    font-family: var(--policeFonts_2); /* Police de caractère */
+    cursor: pointer; /* permet de changer l'apparence de la souris */
+}
+
+.btn button:hover {
+    background-color: var(--color_5); /* Couleur du Bouton */
+    color:var(--color_1); /* Couleur du texte */
+    border: 2px solid var(--color_1);
+    border-top: 0;
+    border-bottom: 0;   
+ }
+
+ .bRouge {
+    color:var(--color_3); /* Couleur du texte */
+ }
+
+ .case_errors {
+    grid-area :O; /*Emplacement dans la grille */
+    font-family: var(--policeFonts_1); /*Choix de la police d'écriture*/
+    font-size: var(--policeTaille_5); /*Choix de la taille de la police d'écriture */
+    color:var(--color_3); /* Couleur du texte */
+    border: 2px solid red; /*Bordure */
+    text-align: center; /* Alignement du texte */
+    align-self: center; /* Alignement vertical */
+ }
+
+ .bon_envoi_message {
+    grid-area :O; /*Emplacement dans la grille */
+    font-family: var(--policeFonts_1); /*Choix de la police d'écriture*/
+    font-size: var(--policeTaille_5); /*Choix de la taille de la police d'écriture */
+    color:green; /* Couleur du texte */
+    border: 2px solid green; /*Bordure */
+    text-align: center; /* Alignement du texte */
+    align-self: center; /* Alignement vertical */
+ }
+   
+ 
+
